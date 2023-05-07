@@ -47,7 +47,7 @@ int main(void){
         }
         for(int i = sfd+1;i<=maxfd;i++){
             //有数据
-            if(FD_ISSET(i,&oldset)){
+            if(FD_ISSET(i,&newset)){
                 char buf[1024];
                 int num;
                 if((num = read(i,buf,sizeof buf)) == 0){
